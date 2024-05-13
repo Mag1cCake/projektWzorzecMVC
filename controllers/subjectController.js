@@ -7,7 +7,7 @@ exports.getAllSubjects = (req, res) => {
 
 exports.addSubject = (req, res) => {
   const { name, progress, achievements } = req.body;
-  const id = subjectModel.getAllSubjects().length + 1; // Proste generowanie ID
+  const id = subjectModel.getAllSubjects().length + 1;
   const newSubject = { id, name, progress, achievements };
   subjectModel.addSubject(newSubject);
   res.redirect('/');

@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('background.jpg'); /* Zmień 'background.jpg' na nazwę Twojego obrazka */
+    background-image: url('background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -15,7 +15,7 @@ body {
   }
   
   .button {
-    background-color: #007bff; /* Niebieski kolor przycisku */
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -24,21 +24,20 @@ body {
   }
   
   .button.white {
-    background-color: white; /* Biały kolor przycisku */
+    background-color: white;
     color: #007bff;
   }
   
   .box {
-    background-color: rgba(255, 255, 255, 0.8); /* Szary kwadrat */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
   }
 
   .add-button-container {
-    margin-bottom: 20px; /* Dodanie marginesu na dole kontenera przycisku */
+    margin-bottom: 20px;
   }
   
   .subject-item {
-    margin-bottom: 10px; /* Dodanie marginesu na dole elementu listy */
+    margin-bottom: 10px;
   }
-

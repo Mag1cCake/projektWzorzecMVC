@@ -3,19 +3,15 @@ const app = express();
 const subjectRoutes = require('./routes/subjectRoutes');
 const subjectModel = require('./models/subjectModel');
 
-// Ustawienia aplikacji
 app.set('view engine', 'ejs');
 
-// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// Trasy
 app.use('/', subjectRoutes);
 
-// Obsługa ścieżki /add
 app.get('/add', (req, res) => {
-  res.render('addSubject'); // Renderowanie widoku do dodawania nowego przedmiotu
+  res.render('addSubject');
 });
 
 app.get('/edit/:id', (req, res) => {
@@ -27,15 +23,13 @@ app.get('/edit/:id', (req, res) => {
     return;
   }
 
-  // Sprawdzenie czy achievements jest pojedynczym ciągiem znaków i zamiana go na tablicę
   if (typeof subject.achievements === 'string') {
     subject.achievements = [subject.achievements];
   }
 
-  res.render('editSubject', { subject }); // Przekazanie przedmiotu do widoku
+  res.render('editSubject', { subject });
 });
 
-// Serwer nasłuchujący na porcie 3000
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

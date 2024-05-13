@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subjects</title>
-  <link rel="stylesheet" type="text/css" href="/style.css"> <!-- Dodanie stylów CSS -->
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
   <div class="container">
     <h1>Subjects</h1>
     <div class="add-button-container">
-      <a href="/add" class="button white">Add New Subject</a> <!-- Przycisk "Add New Subject" -->
+      <a href="/add" class="button white">Add New Subject</a>
     </div>
     <ul>
       <% subjects.forEach(subject => { %>
-        <li class="subject-item"> <!-- Dodany klasa dla elementu listy -->
+        <li class="subject-item">
           <strong><%= subject.name %></strong><br>
           <span>Progress: <%= subject.progress %>%</span><br>
           <span>Achievements: <%= subject.achievements.join(', ') %></span><br>
