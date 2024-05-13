@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Subject</title>
+  <link rel="stylesheet" type="text/css" href="/style.css"> <!-- Dodanie stylów CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Edit Subject</h1>
+    <form method="POST" action="/edit/<%= subject.id %>">
+      <label>Name:</label>
+      <input type="text" name="name" value="<%= subject.name %>" required><br>
+      <label>Progress:</label>
+      <input type="number" name="progress" min="0" max="100" value="<%= subject.progress %>" required><br>
+      <label>Achievements:</label>
+      <input type="text" name="achievements" value="<%= subject.achievements.join(', ') %>" required><br>
+      <button class="button" type="submit">Save</button> <!-- Dodanie przycisku stylizowanego -->
+    </form>
+    </div>
+  </div>
+</body>
+</html>

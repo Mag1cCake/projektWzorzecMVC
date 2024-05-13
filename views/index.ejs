@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects</title>
+  <link rel="stylesheet" type="text/css" href="/style.css"> <!-- Dodanie stylów CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Subjects</h1>
+    <div class="add-button-container">
+      <a href="/add" class="button white">Add New Subject</a> <!-- Przycisk "Add New Subject" -->
+    </div>
+    <ul>
+      <% subjects.forEach(subject => { %>
+        <li class="subject-item"> <!-- Dodany klasa dla elementu listy -->
+          <strong><%= subject.name %></strong><br>
+          <span>Progress: <%= subject.progress %>%</span><br>
+          <span>Achievements: <%= subject.achievements.join(', ') %></span><br>
+          <a href="/edit/<%= subject.id %>">Edit</a>
+          <form method="POST" action="/delete/<%= subject.id %>" style="display:inline;">
+            <button class="button" type="submit">Delete</button>
+          </form>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</body>
+</html>
