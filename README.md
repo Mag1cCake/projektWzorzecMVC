@@ -26,7 +26,7 @@ Projekt "System monitorowania postępów w nauce" umożliwia użytkownikom śled
 ### Uruchomienie projektu
 1. Sklonuj repozytorium na swoje lokalne środowisko pracy:
    ```bash
-   git clone https://github.com/twoj-uzytkownik/nazwa-repozytorium.git
+   git clone https://github.com/Mag1cCake/projektWzorzecMVC
 2. Przejdź do katalogu projektu: cd projektWzorzecMVC
 3. Zainstaluj wymagane zależności:npm init -y
 npm install express ejs
